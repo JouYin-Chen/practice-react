@@ -50,7 +50,7 @@
     "react/no-unescaped-entities": ["error"],
     "react/no-unused-prop-types": ["error"],
     "react/prefer-es6-class": ["warn", "always"],
-    "react/prefer-stateless-function": ["warn"],
+    "react/prefer-stateless-function": ["off"],
     "react/jsx-key": ["error"],
     "no-trailing-spaces": ["error", { "skipBlankLines": true }],
     // "react/jsx-equals-spacing": ["error", "always"],
