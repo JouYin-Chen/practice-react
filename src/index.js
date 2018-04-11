@@ -1,16 +1,22 @@
 
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+import { Router, Link, Route } from 'react-router-dom'
+
+import Main from './Main/index'
+import Second from './Second/index'
+import history from './history'
 
 class App extends Component {
+
   render() {
     return (
-      <div>
-        <h1>Hello, World!</h1>
-        <h2>Hello, World!</h2>
-        <h3>Hello, World!</h3>
-        <h4>Hello, World!</h4>
-      </div>
+      <Router history={history}>
+        <div >
+          <Route exact path="/" component={Main} />
+          <Route path="/Second" component={Second} />
+        </div>
+      </Router>
     )
   }
 }
