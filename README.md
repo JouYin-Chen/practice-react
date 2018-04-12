@@ -86,3 +86,10 @@
         ],
       },
       ```
+  - postcss
+    - css 處理器分為兩種，post-processor & pre-processor, pre-processor可以在css時擁有變數的功能，使用變數就可以減去多次修改的麻煩。還有在css屬性必須加上prefix，讓瀏覽器能夠使用，post-processor就可以處理這件事。
+    - postcss可以將需要的功能加入。支援加入變數或是mixin，增加瀏覽器的prefix。posscss功能有兩個，一是將css解析成js可以操作的Abstract Syntax Tree結構，二則是使用plugin來處理Abstract Syntax Tree並得到結果。而並非只是post-processor or pre-processor而已。
+    - 安裝 `npm install postcss-loader --save-dev`
+    - 其他plugins
+      - postcss-cssnext 可以使用未來的css特性，variable, autoprefixer, :: pseudo syntax...etc
+      - postcss-import 可以在css使用`@import`
