@@ -63,10 +63,26 @@
     console.log(...x)
   ```
   2. babel-plugin-transform-decorators-legacy  
-  Decorators like @autobind can be used
+    - Decorators like @autobind can be used
   3. babel-plugin-transform-class-properties  
-  在react 裡使用arrow function
-
-
-
-
+    - 在react 裡使用arrow function
+- CSS module
+  - 加載 css-loader, style-loader
+    - 使用css-loader先讀取css檔案成為JSON字串，然後把讀到的CSS-JSON字串再用style-loader讓網頁在實際執行
+    - 安裝 `$npm install css-loader style-loader --save-dev`
+    - 設定 webpack
+      ```
+      ...
+      {
+        test: /\.css$/,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+            },
+          },
+        ],
+      },
+      ```
