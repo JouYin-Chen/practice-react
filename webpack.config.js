@@ -21,20 +21,22 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015', 'react', 'stage-0'],
         },
       },
       {
         test: /\.css$/,
         use: [
-          'style-loader',
+          'style-loader?sourceMap',
           {
             loader: 'css-loader',
             options: {
-              modules: true,
-              localIdentName: '[path][name]__[local]--[hash:base64:5]',
+              modules: true, // default is false
+              sourceMap: true,
               importLoaders: 1,
+              localIdentName: '[path]___[name]__[local]___[hash:base64:5]',
             },
           },
           'postcss-loader',

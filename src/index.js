@@ -3,8 +3,9 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Link, Route } from 'react-router-dom'
 
-import Main from './Main/index'
 import Second from './Second/index'
+import Chart from './Chart/index'
+
 import history from './history'
 
 class App extends Component {
@@ -13,7 +14,7 @@ class App extends Component {
     return (
       <Router history={history}>
         <div >
-          <Route exact path="/" component={Main} />
+          <Route exact path="/" component={Chart} />
           <Route path="/Second" component={Second} />
         </div>
       </Router>

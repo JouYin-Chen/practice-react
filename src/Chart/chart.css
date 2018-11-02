@@ -1,0 +1,36 @@
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  overflow: auto;
+}
+
+svg {
+  align-self: center;
+}
+
+.bg-line {
+  stroke: color(black a(70%));
+  stroke-width: 0.7;
+}
+
+.bg-horizontal-line {
+  composes: bg-line;
+  stroke-dasharray: 5, 5;
+}
+
+.tooltip-rect {
+  display: none;
+}
+
+.rect-bar:hover .tooltip-rect{
+  display: block;
+  opacity: 0.5;
+}
+
+.bar-tooltip {
+  width : 120px;
+  height: 50px;
+}
